@@ -1,0 +1,21 @@
+{
+  "name": "telegrambot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "engines": {
+    "node": "10.1.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/maps": "^0.4.6",
+    "config": "^1.30.0",
+    "node-schedule": "^1.3.0",
+    "node-telegram-bot-api": "^0.30.0",
+    "request": "^2.87.0"
+  }
+}

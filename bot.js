@@ -127,12 +127,16 @@ bot.on('inline_query', (query) => {
 		}
 		Promise.all(promises)
 			.then((answerToQuery) => {
-				bot.answerInlineQuery(query.id, answerToQuery[0], {cache_time: 0});
+        let answer = [];
+        answerToQuery.forEach((item) => {
+          answer.push(item[0]);
+        });
+			bot.answerInlineQuery(query.id, answer, {cache_time: 0});
 			});
 	} else {
 		getForecastData(queriedCity)
 			.then(answerToQuery => {
-				bot.answerInlineQuery(query.id, [answerToQuery[0]], {cache_time: 0});
+        		bot.answerInlineQuery(query.id, [answerToQuery[0]], {cache_time: 0});
 			});
 	}
 });
